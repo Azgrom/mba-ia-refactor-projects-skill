@@ -3,6 +3,7 @@
 Ao longo do curso você aprendeu o que são Skills e como elas permitem que um agente de IA atue como um especialista em tarefas específicas. Agora imagine o seguinte cenário: você herdou 3 projetos legados com problemas de arquitetura, segurança e qualidade de código. Revisar e corrigir tudo manualmente levaria dias.
 
 Neste desafio, você vai criar uma Skill que automatiza esse processo — analisando, auditando e refatorando qualquer projeto para o padrão MVC, independente da tecnologia.
+
 ## Objetivo
 
 Você deve entregar uma Skill capaz de:
@@ -243,7 +244,7 @@ claude "/refactor-arch"
 
 # Entregável
 
-- Repositório público no GitHub (fork do repositório base) contendo:
+- [Repositório público no GitHub (fork do repositório base) contendo](https://github.com/devfullcycle/mba-ia-refactor-projects-skill):
 
 - Skill completa em .claude/skills/refactor-arch/ (dentro dos 3 projetos)
 - Código refatorado dos 3 projetos (resultado da execução da Fase 3, commitado no repositório)
@@ -344,10 +345,10 @@ Todos os critérios devem ser atingidos nos 3 projetos, não apenas em um!
 
 # Referências
 
-- Claude Code: Skills — Documentação oficial sobre como criar e estruturar Skills
-- Claude Code: Overview — Visão geral do Claude Code e suas capacidades
-- The Complete Guide to Building Skills for Claude (PDF) — Guia completo da Anthropic sobre construção de Skills
-- Equipping Agents for the Real World with Agent Skills — Blog oficial da Anthropic sobre Agent Skills
+- [Claude Code: Skills](https://docs.anthropic.com/en/docs/claude-code/skills) — Documentação oficial sobre como criar e estruturar Skills
+- [Claude Code: Overview](https://docs.anthropic.com/en/docs/claude-code/overview) — Visão geral do Claude Code e suas capacidades
+- [The Complete Guide to Building Skills for Claude (PDF)](https://resources.anthropic.com/hubfs/The-Complete-Guide-to-Building-Skill-for-Claude.pdf) — Guia completo da Anthropic sobre construção de Skills
+- [Equipping Agents for the Real World with Agent Skills](https://claude.com/blog/equipping-agents-for-the-real-world-with-agent-skills) — Blog oficial da Anthropic sobre Agent Skills
 
 # Dicas Finais
 
