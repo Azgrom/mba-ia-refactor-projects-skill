@@ -1,0 +1,415 @@
+{
+  "metadata": {
+    "skill_name": "refactor-arch",
+    "skill_path": "<path/to/skill>",
+    "executor_model": "<model-name>",
+    "analyzer_model": "<model-name>",
+    "timestamp": "2026-07-14T17:19:11Z",
+    "evals_run": [
+      1,
+      2,
+      3
+    ],
+    "runs_per_configuration": 3
+  },
+  "runs": [
+    {
+      "eval_id": 1,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 8,
+        "failed": 0,
+        "total": 8,
+        "time_seconds": 0.0,
+        "tokens": 20915,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Identifies Python, Flask, the e-commerce domain, app.py as an entry point, SQLite persistence, and the current responsibility shape.",
+          "passed": true,
+          "evidence": "present markers: ['python', 'flask', 'sqlite', 'app.py', 'architecture shape']; domain marker found=True. Observable: The report fingerprint explicitly names stack, domain, entrypoint, persistence, and current responsibility ownership."
+        },
+        {
+          "text": "Records boot, endpoint, representative domain-flow, persistence, and discovery limitations before making architecture judgments.",
+          "passed": true,
+          "evidence": "baseline heading=True; limitations heading=True; generic markers=True; flow markers=True. Observable: The baseline section includes boot command, endpoint surface, a domain flow, persistence expectations, and limitations."
+        },
+        {
+          "text": "Writes outputs/audit.md with fingerprint, scope, baseline, limitations, severity summary in CRITICAL-HIGH-MEDIUM-LOW order, findings, proposed scope, approval prompt, and snapshot digest.",
+          "passed": true,
+          "evidence": "report validator passed. Observable: The audit file follows the exact section contract and digest footer expected by the validator."
+        },
+        {
+          "text": "Contains at least five root-cause-distinct findings, including at least one CRITICAL or HIGH finding.",
+          "passed": true,
+          "evidence": "found 12 findings with severities ['CRITICAL', 'CRITICAL', 'CRITICAL', 'CRITICAL', 'CRITICAL', 'HIGH', 'HIGH', 'HIGH', 'MEDIUM', 'MEDIUM', 'MEDIUM', 'LOW']. Observable: The findings section contains five or more unique finding IDs with at least one high-severity entry."
+        },
+        {
+          "text": "Every finding uses an existing repository-relative file and valid one-based inclusive line range with non-empty evidence, impact, and recommendation.",
+          "passed": true,
+          "evidence": "report validator passed. Observable: Each finding contains a repository-relative location, valid line span, and substantive evidence, impact, and recommendation fields."
+        },
+        {
+          "text": "Any deprecated-API claim is tied to the detected dependency version and authoritative current documentation; otherwise deprecation uncertainty is recorded as a limitation.",
+          "passed": true,
+          "evidence": "version markers=True; authority markers=True; limitation markers=True. Observable: Deprecation claims either cite detected-version authority or are absent with uncertainty stated as a limitation."
+        },
+        {
+          "text": "Does not mutate fixture source, configuration, dependencies, schemas, databases, or tests before explicit approval tied to the reviewed report.",
+          "passed": true,
+          "evidence": "unchanged=True (fixture matches source snapshot); approval markers present=True. Observable: The response ends at a validated report plus approval contract, and the target tree remains unchanged before approval."
+        },
+        {
+          "text": "Proposes responsibility-based MVC changes and names boot, endpoint, domain-flow, persistence, and security validation obligations without forcing one directory template.",
+          "passed": true,
+          "evidence": "responsibility=True, boot=True, endpoint=True, domain=True, persistence=True, security=True. Observable: The proposed scope names responsibility shifts and validation obligations without prescribing a universal file tree."
+        }
+      ],
+      "notes": [
+        "Phase reached: `WAITING_FOR_APPROVAL`. The architecture audit is complete; refactoring and validation were not started because no report-specific approval exists.\n\nThe report contains 12 proposed findings: five CRITICAL, three HIGH, three MEDIUM, and one LOW. No findings are approved, resolved, or d"
+      ]
+    },
+    {
+      "eval_id": 2,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.88,
+        "passed": 7,
+        "failed": 1,
+        "total": 8,
+        "time_seconds": 0.0,
+        "tokens": 12661,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Identifies JavaScript, Express, the LMS domain, src/app.js as the entry point, SQLite persistence, and AppManager-centered responsibilities.",
+          "passed": false,
+          "evidence": "present markers: ['javascript', 'express', 'sqlite', 'src/app.js', 'appmanager']; domain marker found=False. Observable: The fingerprint names JavaScript, Express, LMS context, src/app.js, SQLite, and AppManager as the responsibility hub."
+        },
+        {
+          "text": "Records boot, endpoint, checkout/report/deletion flows, persistence, and discovery limitations before making architecture judgments.",
+          "passed": true,
+          "evidence": "baseline heading=True; limitations heading=True; generic markers=True; flow markers=True. Observable: The baseline inventories boot, route surface, checkout/report/deletion flows, persistence effects, and limitations."
+        },
+        {
+          "text": "Writes outputs/audit.md with fingerprint, scope, baseline, limitations, severity summary in CRITICAL-HIGH-MEDIUM-LOW order, findings, proposed scope, approval prompt, and snapshot digest.",
+          "passed": true,
+          "evidence": "report validator passed. Observable: The audit file matches the shared report contract and includes the approval digest."
+        },
+        {
+          "text": "Contains at least five root-cause-distinct findings, including at least one CRITICAL or HIGH finding.",
+          "passed": true,
+          "evidence": "found 7 findings with severities ['CRITICAL', 'CRITICAL', 'CRITICAL', 'HIGH', 'HIGH', 'HIGH', 'MEDIUM']. Observable: Five or more distinct findings are present, with at least one CRITICAL or HIGH item."
+        },
+        {
+          "text": "Every finding uses an existing repository-relative file and valid one-based inclusive line range with non-empty evidence, impact, and recommendation.",
+          "passed": true,
+          "evidence": "report validator passed. Observable: Each finding cites real repo-relative paths and valid line ranges with substantive justification fields."
+        },
+        {
+          "text": "Any deprecated-API claim is tied to the detected dependency version and authoritative current documentation; otherwise deprecation uncertainty is recorded as a limitation.",
+          "passed": true,
+          "evidence": "version markers=True; authority markers=True; limitation markers=True. Observable: Deprecation findings cite installed-version authority or are deferred into limitations."
+        },
+        {
+          "text": "Does not mutate fixture source, configuration, dependencies, schemas, databases, or tests before explicit approval tied to the reviewed report.",
+          "passed": true,
+          "evidence": "unchanged=True (fixture matches source snapshot); approval markers present=True. Observable: No target files change before the audit response asks for explicit digest-bound approval."
+        },
+        {
+          "text": "Proposes contextual decomposition of AppManager plus boot, endpoint, checkout, persistence, rollback, and security validation without imposing Flask conventions.",
+          "passed": true,
+          "evidence": "appmanager=True, endpoint=True, checkout=True, persistence=True, rollback=True, security=True, no_flask_template=True. Observable: The proposed scope decomposes AppManager responsibilities and names Express-appropriate validation obligations."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 3,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 8,
+        "failed": 0,
+        "total": 8,
+        "time_seconds": 0.0,
+        "tokens": 12044,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Identifies Python, Flask-SQLAlchemy, the task-management domain, app.py as an entry point, SQLite persistence, and the existing layered shape.",
+          "passed": true,
+          "evidence": "present markers: ['python', 'sqlite', 'app.py']; domain marker found=True; shape marker found=True; framework marker found=True. Observable: The fingerprint names Flask-SQLAlchemy, task management, app.py, SQLite, and the current layered decomposition."
+        },
+        {
+          "text": "Records boot, endpoint, task-user-category flows, persistence, and discovery limitations before making architecture judgments.",
+          "passed": true,
+          "evidence": "baseline heading=True; limitations heading=True; generic markers=True; flow markers=True. Observable: The baseline inventories boot, routes, task/user/category flows, persistence expectations, and any discovery gaps."
+        },
+        {
+          "text": "Writes outputs/audit.md with fingerprint, scope, baseline, limitations, severity summary in CRITICAL-HIGH-MEDIUM-LOW order, findings, proposed scope, approval prompt, and snapshot digest.",
+          "passed": true,
+          "evidence": "report validator passed. Observable: The report uses the exact contract and includes an approval-bound snapshot digest."
+        },
+        {
+          "text": "Contains at least five root-cause-distinct findings, including at least one CRITICAL or HIGH finding.",
+          "passed": true,
+          "evidence": "found 6 findings with severities ['CRITICAL', 'CRITICAL', 'CRITICAL', 'HIGH', 'HIGH', 'MEDIUM']. Observable: Five or more distinct findings appear, including at least one CRITICAL or HIGH issue."
+        },
+        {
+          "text": "Every finding uses an existing repository-relative file and valid one-based inclusive line range with non-empty evidence, impact, and recommendation.",
+          "passed": true,
+          "evidence": "report validator passed. Observable: All findings point to existing repository-relative files, valid inclusive ranges, and substantive evidence fields."
+        },
+        {
+          "text": "Any deprecated-API claim is tied to the detected dependency version and authoritative current documentation; otherwise deprecation uncertainty is recorded as a limitation.",
+          "passed": true,
+          "evidence": "version markers=True; authority markers=True; limitation markers=True. Observable: Any deprecation statement is version-aware and authority-backed, or uncertainty is recorded instead."
+        },
+        {
+          "text": "Does not mutate fixture source, configuration, dependencies, schemas, databases, or tests before explicit approval tied to the reviewed report.",
+          "passed": true,
+          "evidence": "unchanged=True (fixture matches source snapshot); approval markers present=True. Observable: The fixture remains unchanged during audit and the response ends with an explicit digest-bound approval request."
+        },
+        {
+          "text": "Retains useful models, blueprints, services, and helpers while proposing targeted responsibility corrections and complete behavioral validation.",
+          "passed": true,
+          "evidence": "retain=True, models=True, blueprints=True, services=True, helpers=True, validation=True. Observable: The proposed scope preserves coherent modules and targets only evidenced responsibility leaks plus full validation duties."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 1,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.12,
+        "passed": 1,
+        "failed": 7,
+        "total": 8,
+        "time_seconds": 0.0,
+        "tokens": 11457,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Identifies Python, Flask, the e-commerce domain, app.py as an entry point, SQLite persistence, and the current responsibility shape.",
+          "passed": false,
+          "evidence": "present markers: ['python', 'flask', 'sqlite', 'app.py']; domain marker found=True. Observable: The report fingerprint explicitly names stack, domain, entrypoint, persistence, and current responsibility ownership."
+        },
+        {
+          "text": "Records boot, endpoint, representative domain-flow, persistence, and discovery limitations before making architecture judgments.",
+          "passed": false,
+          "evidence": "baseline heading=False; limitations heading=False; generic markers=True; flow markers=True. Observable: The baseline section includes boot command, endpoint surface, a domain flow, persistence expectations, and limitations."
+        },
+        {
+          "text": "Writes outputs/audit.md with fingerprint, scope, baseline, limitations, severity summary in CRITICAL-HIGH-MEDIUM-LOW order, findings, proposed scope, approval prompt, and snapshot digest.",
+          "passed": false,
+          "evidence": "Report must start with '# Architecture Audit Report'; Missing required section: Target; Missing required section: Project Fingerprint; Missing required section: Source Scope. Observable: The audit file follows the exact section contract and digest footer expected by the validator."
+        },
+        {
+          "text": "Contains at least five root-cause-distinct findings, including at least one CRITICAL or HIGH finding.",
+          "passed": false,
+          "evidence": "found 0 findings with severities []. Observable: The findings section contains five or more unique finding IDs with at least one high-severity entry."
+        },
+        {
+          "text": "Every finding uses an existing repository-relative file and valid one-based inclusive line range with non-empty evidence, impact, and recommendation.",
+          "passed": false,
+          "evidence": "Report must start with '# Architecture Audit Report'; Missing required section: Target; Missing required section: Project Fingerprint; Missing required section: Source Scope. Observable: Each finding contains a repository-relative location, valid line span, and substantive evidence, impact, and recommendation fields."
+        },
+        {
+          "text": "Any deprecated-API claim is tied to the detected dependency version and authoritative current documentation; otherwise deprecation uncertainty is recorded as a limitation.",
+          "passed": true,
+          "evidence": "no deprecation claim present. Observable: Deprecation claims either cite detected-version authority or are absent with uncertainty stated as a limitation."
+        },
+        {
+          "text": "Does not mutate fixture source, configuration, dependencies, schemas, databases, or tests before explicit approval tied to the reviewed report.",
+          "passed": false,
+          "evidence": "unchanged=False (missing path controllers.py); approval markers present=True. Observable: The response ends at a validated report plus approval contract, and the target tree remains unchanged before approval."
+        },
+        {
+          "text": "Proposes responsibility-based MVC changes and names boot, endpoint, domain-flow, persistence, and security validation obligations without forcing one directory template.",
+          "passed": false,
+          "evidence": "responsibility=True, boot=True, endpoint=True, domain=True, persistence=True, security=False. Observable: The proposed scope names responsibility shifts and validation obligations without prescribing a universal file tree."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.12,
+        "passed": 1,
+        "failed": 7,
+        "total": 8,
+        "time_seconds": 0.0,
+        "tokens": 10384,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Identifies JavaScript, Express, the LMS domain, src/app.js as the entry point, SQLite persistence, and AppManager-centered responsibilities.",
+          "passed": false,
+          "evidence": "present markers: ['express', 'sqlite', 'appmanager']; domain marker found=True. Observable: The fingerprint names JavaScript, Express, LMS context, src/app.js, SQLite, and AppManager as the responsibility hub."
+        },
+        {
+          "text": "Records boot, endpoint, checkout/report/deletion flows, persistence, and discovery limitations before making architecture judgments.",
+          "passed": false,
+          "evidence": "baseline heading=False; limitations heading=False; generic markers=False; flow markers=True. Observable: The baseline inventories boot, route surface, checkout/report/deletion flows, persistence effects, and limitations."
+        },
+        {
+          "text": "Writes outputs/audit.md with fingerprint, scope, baseline, limitations, severity summary in CRITICAL-HIGH-MEDIUM-LOW order, findings, proposed scope, approval prompt, and snapshot digest.",
+          "passed": false,
+          "evidence": "Report must start with '# Architecture Audit Report'; Missing required section: Target; Missing required section: Project Fingerprint; Missing required section: Source Scope. Observable: The audit file matches the shared report contract and includes the approval digest."
+        },
+        {
+          "text": "Contains at least five root-cause-distinct findings, including at least one CRITICAL or HIGH finding.",
+          "passed": false,
+          "evidence": "found 0 findings with severities []. Observable: Five or more distinct findings are present, with at least one CRITICAL or HIGH item."
+        },
+        {
+          "text": "Every finding uses an existing repository-relative file and valid one-based inclusive line range with non-empty evidence, impact, and recommendation.",
+          "passed": false,
+          "evidence": "Report must start with '# Architecture Audit Report'; Missing required section: Target; Missing required section: Project Fingerprint; Missing required section: Source Scope. Observable: Each finding cites real repo-relative paths and valid line ranges with substantive justification fields."
+        },
+        {
+          "text": "Any deprecated-API claim is tied to the detected dependency version and authoritative current documentation; otherwise deprecation uncertainty is recorded as a limitation.",
+          "passed": true,
+          "evidence": "version markers=True; authority markers=True; limitation markers=False. Observable: Deprecation findings cite installed-version authority or are deferred into limitations."
+        },
+        {
+          "text": "Does not mutate fixture source, configuration, dependencies, schemas, databases, or tests before explicit approval tied to the reviewed report.",
+          "passed": false,
+          "evidence": "unchanged=False (missing path src/AppManager.js); approval markers present=False. Observable: No target files change before the audit response asks for explicit digest-bound approval."
+        },
+        {
+          "text": "Proposes contextual decomposition of AppManager plus boot, endpoint, checkout, persistence, rollback, and security validation without imposing Flask conventions.",
+          "passed": false,
+          "evidence": "appmanager=True, endpoint=True, checkout=True, persistence=False, rollback=True, security=False, no_flask_template=True. Observable: The proposed scope decomposes AppManager responsibilities and names Express-appropriate validation obligations."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 3,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.25,
+        "passed": 2,
+        "failed": 6,
+        "total": 8,
+        "time_seconds": 0.0,
+        "tokens": 8225,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Identifies Python, Flask-SQLAlchemy, the task-management domain, app.py as an entry point, SQLite persistence, and the existing layered shape.",
+          "passed": false,
+          "evidence": "present markers: ['python', 'app.py']; domain marker found=True; shape marker found=True; framework marker found=True. Observable: The fingerprint names Flask-SQLAlchemy, task management, app.py, SQLite, and the current layered decomposition."
+        },
+        {
+          "text": "Records boot, endpoint, task-user-category flows, persistence, and discovery limitations before making architecture judgments.",
+          "passed": false,
+          "evidence": "baseline heading=False; limitations heading=False; generic markers=False; flow markers=True. Observable: The baseline inventories boot, routes, task/user/category flows, persistence expectations, and any discovery gaps."
+        },
+        {
+          "text": "Writes outputs/audit.md with fingerprint, scope, baseline, limitations, severity summary in CRITICAL-HIGH-MEDIUM-LOW order, findings, proposed scope, approval prompt, and snapshot digest.",
+          "passed": false,
+          "evidence": "Report must start with '# Architecture Audit Report'; Missing required section: Target; Missing required section: Project Fingerprint; Missing required section: Source Scope. Observable: The report uses the exact contract and includes an approval-bound snapshot digest."
+        },
+        {
+          "text": "Contains at least five root-cause-distinct findings, including at least one CRITICAL or HIGH finding.",
+          "passed": false,
+          "evidence": "found 0 findings with severities []. Observable: Five or more distinct findings appear, including at least one CRITICAL or HIGH issue."
+        },
+        {
+          "text": "Every finding uses an existing repository-relative file and valid one-based inclusive line range with non-empty evidence, impact, and recommendation.",
+          "passed": false,
+          "evidence": "Report must start with '# Architecture Audit Report'; Missing required section: Target; Missing required section: Project Fingerprint; Missing required section: Source Scope. Observable: All findings point to existing repository-relative files, valid inclusive ranges, and substantive evidence fields."
+        },
+        {
+          "text": "Any deprecated-API claim is tied to the detected dependency version and authoritative current documentation; otherwise deprecation uncertainty is recorded as a limitation.",
+          "passed": true,
+          "evidence": "version markers=True; authority markers=True; limitation markers=False. Observable: Any deprecation statement is version-aware and authority-backed, or uncertainty is recorded instead."
+        },
+        {
+          "text": "Does not mutate fixture source, configuration, dependencies, schemas, databases, or tests before explicit approval tied to the reviewed report.",
+          "passed": false,
+          "evidence": "unchanged=False (extra path .pytest_cache/.gitignore); approval markers present=False. Observable: The fixture remains unchanged during audit and the response ends with an explicit digest-bound approval request."
+        },
+        {
+          "text": "Retains useful models, blueprints, services, and helpers while proposing targeted responsibility corrections and complete behavioral validation.",
+          "passed": true,
+          "evidence": "retain=True, models=True, blueprints=True, services=True, helpers=True, validation=True. Observable: The proposed scope preserves coherent modules and targets only evidenced responsibility leaks plus full validation duties."
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {
+        "mean": 0.96,
+        "stddev": 0.0693,
+        "min": 0.88,
+        "max": 1.0
+      },
+      "time_seconds": {
+        "mean": 0.0,
+        "stddev": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "tokens": {
+        "mean": 15206.6667,
+        "stddev": 4953.1782,
+        "min": 12044,
+        "max": 20915
+      }
+    },
+    "without_skill": {
+      "pass_rate": {
+        "mean": 0.1633,
+        "stddev": 0.0751,
+        "min": 0.12,
+        "max": 0.25
+      },
+      "time_seconds": {
+        "mean": 0.0,
+        "stddev": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "tokens": {
+        "mean": 10022.0,
+        "stddev": 1646.1285,
+        "min": 8225,
+        "max": 11457
+      }
+    },
+    "delta": {
+      "pass_rate": "+0.80",
+      "time_seconds": "+0.0",
+      "tokens": "+5185"
+    }
+  },
+  "notes": []
+}

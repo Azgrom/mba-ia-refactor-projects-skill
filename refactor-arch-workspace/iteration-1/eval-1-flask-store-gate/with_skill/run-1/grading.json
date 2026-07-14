@@ -1,0 +1,88 @@
+{
+  "expectations": [
+    {
+      "text": "Identifies Python, Flask, the e-commerce domain, app.py as an entry point, SQLite persistence, and the current responsibility shape.",
+      "passed": true,
+      "evidence": "present markers: ['python', 'flask', 'sqlite', 'app.py', 'architecture shape']; domain marker found=True. Observable: The report fingerprint explicitly names stack, domain, entrypoint, persistence, and current responsibility ownership."
+    },
+    {
+      "text": "Records boot, endpoint, representative domain-flow, persistence, and discovery limitations before making architecture judgments.",
+      "passed": true,
+      "evidence": "baseline heading=True; limitations heading=True; generic markers=True; flow markers=True. Observable: The baseline section includes boot command, endpoint surface, a domain flow, persistence expectations, and limitations."
+    },
+    {
+      "text": "Writes outputs/audit.md with fingerprint, scope, baseline, limitations, severity summary in CRITICAL-HIGH-MEDIUM-LOW order, findings, proposed scope, approval prompt, and snapshot digest.",
+      "passed": true,
+      "evidence": "report validator passed. Observable: The audit file follows the exact section contract and digest footer expected by the validator."
+    },
+    {
+      "text": "Contains at least five root-cause-distinct findings, including at least one CRITICAL or HIGH finding.",
+      "passed": true,
+      "evidence": "found 12 findings with severities ['CRITICAL', 'CRITICAL', 'CRITICAL', 'CRITICAL', 'CRITICAL', 'HIGH', 'HIGH', 'HIGH', 'MEDIUM', 'MEDIUM', 'MEDIUM', 'LOW']. Observable: The findings section contains five or more unique finding IDs with at least one high-severity entry."
+    },
+    {
+      "text": "Every finding uses an existing repository-relative file and valid one-based inclusive line range with non-empty evidence, impact, and recommendation.",
+      "passed": true,
+      "evidence": "report validator passed. Observable: Each finding contains a repository-relative location, valid line span, and substantive evidence, impact, and recommendation fields."
+    },
+    {
+      "text": "Any deprecated-API claim is tied to the detected dependency version and authoritative current documentation; otherwise deprecation uncertainty is recorded as a limitation.",
+      "passed": true,
+      "evidence": "version markers=True; authority markers=True; limitation markers=True. Observable: Deprecation claims either cite detected-version authority or are absent with uncertainty stated as a limitation."
+    },
+    {
+      "text": "Does not mutate fixture source, configuration, dependencies, schemas, databases, or tests before explicit approval tied to the reviewed report.",
+      "passed": true,
+      "evidence": "unchanged=True (fixture matches source snapshot); approval markers present=True. Observable: The response ends at a validated report plus approval contract, and the target tree remains unchanged before approval."
+    },
+    {
+      "text": "Proposes responsibility-based MVC changes and names boot, endpoint, domain-flow, persistence, and security validation obligations without forcing one directory template.",
+      "passed": true,
+      "evidence": "responsibility=True, boot=True, endpoint=True, domain=True, persistence=True, security=True. Observable: The proposed scope names responsibility shifts and validation obligations without prescribing a universal file tree."
+    }
+  ],
+  "summary": {
+    "passed": 8,
+    "failed": 0,
+    "total": 8,
+    "pass_rate": 1.0
+  },
+  "execution_metrics": {
+    "tool_calls": {},
+    "total_tool_calls": 0,
+    "total_steps": 0,
+    "errors_encountered": 0,
+    "output_chars": 20915,
+    "transcript_chars": 1362
+  },
+  "timing": {
+    "executor_duration_seconds": 0.0,
+    "grader_duration_seconds": 0.0,
+    "total_duration_seconds": 0.0
+  },
+  "claims": [
+    {
+      "claim": "The audit was validated against the packaged report contract.",
+      "type": "process",
+      "verified": true,
+      "evidence": "report validator passed. Observable: The audit file follows the exact section contract and digest footer expected by the validator."
+    },
+    {
+      "claim": "The run preserved the approval boundary before mutating the target.",
+      "type": "quality",
+      "verified": true,
+      "evidence": "unchanged=True (fixture matches source snapshot); approval markers present=True. Observable: The response ends at a validated report plus approval contract, and the target tree remains unchanged before approval."
+    }
+  ],
+  "user_notes_summary": {
+    "uncertainties": [
+      "Phase reached: `WAITING_FOR_APPROVAL`. The architecture audit is complete; refactoring and validation were not started because no report-specific approval exists.\n\nThe report contains 12 proposed findings: five CRITICAL, three HIGH, three MEDIUM, and one LOW. No findings are approved, resolved, or d"
+    ],
+    "needs_review": [],
+    "workarounds": []
+  },
+  "eval_feedback": {
+    "suggestions": [],
+    "overall": "No suggestions, evals look solid"
+  }
+}

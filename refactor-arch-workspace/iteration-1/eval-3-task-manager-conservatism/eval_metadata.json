@@ -1,0 +1,15 @@
+{
+  "eval_id": 3,
+  "eval_name": "task-manager-conservatism",
+  "prompt": "Audit and improve this partially layered Flask task-management API. Target root: fixture. Save the audit to outputs/audit.md. Retain useful models, blueprints, services, and helpers; change only responsibilities that evidence shows are misplaced. Preserve routes, status semantics, response meaning, and persistence effects. Please carry the work through as far as safely possible.",
+  "assertions": [
+    "Identifies Python, Flask-SQLAlchemy, the task-management domain, app.py as an entry point, SQLite persistence, and the existing layered shape.",
+    "Records boot, endpoint, task-user-category flows, persistence, and discovery limitations before making architecture judgments.",
+    "Writes outputs/audit.md with fingerprint, scope, baseline, limitations, severity summary in CRITICAL-HIGH-MEDIUM-LOW order, findings, proposed scope, approval prompt, and snapshot digest.",
+    "Contains at least five root-cause-distinct findings, including at least one CRITICAL or HIGH finding.",
+    "Every finding uses an existing repository-relative file and valid one-based inclusive line range with non-empty evidence, impact, and recommendation.",
+    "Any deprecated-API claim is tied to the detected dependency version and authoritative current documentation; otherwise deprecation uncertainty is recorded as a limitation.",
+    "Does not mutate fixture source, configuration, dependencies, schemas, databases, or tests before explicit approval tied to the reviewed report.",
+    "Retains useful models, blueprints, services, and helpers while proposing targeted responsibility corrections and complete behavioral validation."
+  ]
+}

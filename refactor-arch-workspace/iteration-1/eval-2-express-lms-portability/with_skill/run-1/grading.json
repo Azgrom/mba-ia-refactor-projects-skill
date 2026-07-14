@@ -1,0 +1,86 @@
+{
+  "expectations": [
+    {
+      "text": "Identifies JavaScript, Express, the LMS domain, src/app.js as the entry point, SQLite persistence, and AppManager-centered responsibilities.",
+      "passed": false,
+      "evidence": "present markers: ['javascript', 'express', 'sqlite', 'src/app.js', 'appmanager']; domain marker found=False. Observable: The fingerprint names JavaScript, Express, LMS context, src/app.js, SQLite, and AppManager as the responsibility hub."
+    },
+    {
+      "text": "Records boot, endpoint, checkout/report/deletion flows, persistence, and discovery limitations before making architecture judgments.",
+      "passed": true,
+      "evidence": "baseline heading=True; limitations heading=True; generic markers=True; flow markers=True. Observable: The baseline inventories boot, route surface, checkout/report/deletion flows, persistence effects, and limitations."
+    },
+    {
+      "text": "Writes outputs/audit.md with fingerprint, scope, baseline, limitations, severity summary in CRITICAL-HIGH-MEDIUM-LOW order, findings, proposed scope, approval prompt, and snapshot digest.",
+      "passed": true,
+      "evidence": "report validator passed. Observable: The audit file matches the shared report contract and includes the approval digest."
+    },
+    {
+      "text": "Contains at least five root-cause-distinct findings, including at least one CRITICAL or HIGH finding.",
+      "passed": true,
+      "evidence": "found 7 findings with severities ['CRITICAL', 'CRITICAL', 'CRITICAL', 'HIGH', 'HIGH', 'HIGH', 'MEDIUM']. Observable: Five or more distinct findings are present, with at least one CRITICAL or HIGH item."
+    },
+    {
+      "text": "Every finding uses an existing repository-relative file and valid one-based inclusive line range with non-empty evidence, impact, and recommendation.",
+      "passed": true,
+      "evidence": "report validator passed. Observable: Each finding cites real repo-relative paths and valid line ranges with substantive justification fields."
+    },
+    {
+      "text": "Any deprecated-API claim is tied to the detected dependency version and authoritative current documentation; otherwise deprecation uncertainty is recorded as a limitation.",
+      "passed": true,
+      "evidence": "version markers=True; authority markers=True; limitation markers=True. Observable: Deprecation findings cite installed-version authority or are deferred into limitations."
+    },
+    {
+      "text": "Does not mutate fixture source, configuration, dependencies, schemas, databases, or tests before explicit approval tied to the reviewed report.",
+      "passed": true,
+      "evidence": "unchanged=True (fixture matches source snapshot); approval markers present=True. Observable: No target files change before the audit response asks for explicit digest-bound approval."
+    },
+    {
+      "text": "Proposes contextual decomposition of AppManager plus boot, endpoint, checkout, persistence, rollback, and security validation without imposing Flask conventions.",
+      "passed": true,
+      "evidence": "appmanager=True, endpoint=True, checkout=True, persistence=True, rollback=True, security=True, no_flask_template=True. Observable: The proposed scope decomposes AppManager responsibilities and names Express-appropriate validation obligations."
+    }
+  ],
+  "summary": {
+    "passed": 7,
+    "failed": 1,
+    "total": 8,
+    "pass_rate": 0.88
+  },
+  "execution_metrics": {
+    "tool_calls": {},
+    "total_tool_calls": 0,
+    "total_steps": 0,
+    "errors_encountered": 0,
+    "output_chars": 12661,
+    "transcript_chars": 980
+  },
+  "timing": {
+    "executor_duration_seconds": 0.0,
+    "grader_duration_seconds": 0.0,
+    "total_duration_seconds": 0.0
+  },
+  "claims": [
+    {
+      "claim": "The audit was validated against the packaged report contract.",
+      "type": "process",
+      "verified": true,
+      "evidence": "report validator passed. Observable: The audit file matches the shared report contract and includes the approval digest."
+    },
+    {
+      "claim": "The run preserved the approval boundary before mutating the target.",
+      "type": "quality",
+      "verified": true,
+      "evidence": "unchanged=True (fixture matches source snapshot); approval markers present=True. Observable: No target files change before the audit response asks for explicit digest-bound approval."
+    }
+  ],
+  "user_notes_summary": {
+    "uncertainties": [],
+    "needs_review": [],
+    "workarounds": []
+  },
+  "eval_feedback": {
+    "suggestions": [],
+    "overall": "No suggestions, evals look solid"
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "expectations": [
+    {
+      "text": "Identifies Python, Flask-SQLAlchemy, the task-management domain, app.py as an entry point, SQLite persistence, and the existing layered shape.",
+      "passed": false,
+      "evidence": "present markers: ['python', 'app.py']; domain marker found=True; shape marker found=True; framework marker found=True. Observable: The fingerprint names Flask-SQLAlchemy, task management, app.py, SQLite, and the current layered decomposition."
+    },
+    {
+      "text": "Records boot, endpoint, task-user-category flows, persistence, and discovery limitations before making architecture judgments.",
+      "passed": false,
+      "evidence": "baseline heading=False; limitations heading=False; generic markers=False; flow markers=True. Observable: The baseline inventories boot, routes, task/user/category flows, persistence expectations, and any discovery gaps."
+    },
+    {
+      "text": "Writes outputs/audit.md with fingerprint, scope, baseline, limitations, severity summary in CRITICAL-HIGH-MEDIUM-LOW order, findings, proposed scope, approval prompt, and snapshot digest.",
+      "passed": false,
+      "evidence": "Report must start with '# Architecture Audit Report'; Missing required section: Target; Missing required section: Project Fingerprint; Missing required section: Source Scope. Observable: The report uses the exact contract and includes an approval-bound snapshot digest."
+    },
+    {
+      "text": "Contains at least five root-cause-distinct findings, including at least one CRITICAL or HIGH finding.",
+      "passed": false,
+      "evidence": "found 0 findings with severities []. Observable: Five or more distinct findings appear, including at least one CRITICAL or HIGH issue."
+    },
+    {
+      "text": "Every finding uses an existing repository-relative file and valid one-based inclusive line range with non-empty evidence, impact, and recommendation.",
+      "passed": false,
+      "evidence": "Report must start with '# Architecture Audit Report'; Missing required section: Target; Missing required section: Project Fingerprint; Missing required section: Source Scope. Observable: All findings point to existing repository-relative files, valid inclusive ranges, and substantive evidence fields."
+    },
+    {
+      "text": "Any deprecated-API claim is tied to the detected dependency version and authoritative current documentation; otherwise deprecation uncertainty is recorded as a limitation.",
+      "passed": true,
+      "evidence": "version markers=True; authority markers=True; limitation markers=False. Observable: Any deprecation statement is version-aware and authority-backed, or uncertainty is recorded instead."
+    },
+    {
+      "text": "Does not mutate fixture source, configuration, dependencies, schemas, databases, or tests before explicit approval tied to the reviewed report.",
+      "passed": false,
+      "evidence": "unchanged=False (extra path .pytest_cache/.gitignore); approval markers present=False. Observable: The fixture remains unchanged during audit and the response ends with an explicit digest-bound approval request."
+    },
+    {
+      "text": "Retains useful models, blueprints, services, and helpers while proposing targeted responsibility corrections and complete behavioral validation.",
+      "passed": true,
+      "evidence": "retain=True, models=True, blueprints=True, services=True, helpers=True, validation=True. Observable: The proposed scope preserves coherent modules and targets only evidenced responsibility leaks plus full validation duties."
+    }
+  ],
+  "summary": {
+    "passed": 2,
+    "failed": 6,
+    "total": 8,
+    "pass_rate": 0.25
+  },
+  "execution_metrics": {
+    "tool_calls": {},
+    "total_tool_calls": 0,
+    "total_steps": 0,
+    "errors_encountered": 0,
+    "output_chars": 8225,
+    "transcript_chars": 872
+  },
+  "timing": {
+    "executor_duration_seconds": 0.0,
+    "grader_duration_seconds": 0.0,
+    "total_duration_seconds": 0.0
+  },
+  "claims": [
+    {
+      "claim": "The audit was validated against the packaged report contract.",
+      "type": "process",
+      "verified": false,
+      "evidence": "Report must start with '# Architecture Audit Report'; Missing required section: Target; Missing required section: Project Fingerprint; Missing required section: Source Scope. Observable: The report uses the exact contract and includes an approval-bound snapshot digest."
+    },
+    {
+      "claim": "The run preserved the approval boundary before mutating the target.",
+      "type": "quality",
+      "verified": false,
+      "evidence": "unchanged=False (extra path .pytest_cache/.gitignore); approval markers present=False. Observable: The fixture remains unchanged during audit and the response ends with an explicit digest-bound approval request."
+    }
+  ],
+  "user_notes_summary": {
+    "uncertainties": [],
+    "needs_review": [],
+    "workarounds": []
+  },
+  "eval_feedback": {
+    "suggestions": [],
+    "overall": "No suggestions, evals look solid"
+  }
+}

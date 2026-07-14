@@ -1,0 +1,7 @@
+[
+  "The strongest discriminator across all three evals is the approval-gated audit contract: every without-skill run failed the validated-report and no-mutation expectations, while every with-skill run satisfied them.",
+  "Eval 2 is the only with-skill run below 100% pass rate (7/8). Its miss is the fingerprint assertion, which suggests the fingerprint wording check is stricter than the rest of the contract and may be the most brittle expectation in the suite.",
+  "Eval 3 shows the highest baseline score (25%) because the partially layered task-manager fixture already encourages conservative architecture language; the contract, exact evidence, and approval-boundary assertions are what still separate the skill from baseline behavior.",
+  "The benchmark's time metrics are all 0.0 because task notifications in this environment did not expose duration or token counters for executor runs. The 'tokens' column in benchmark.json is therefore an output-size proxy derived from grading metrics, not real model token usage.",
+  "With-skill runs average about 5.2k more output characters than baselines, which is consistent with the added project fingerprint, severity summary, approval contract, and exact-evidence formatting required by the skill."
+]

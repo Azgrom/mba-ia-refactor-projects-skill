@@ -1,0 +1,15 @@
+{
+  "eval_id": 2,
+  "eval_name": "express-lms-portability",
+  "prompt": "Review this legacy Express API for architecture, security, data-integrity, performance, and deprecated-API problems, then modernize it toward responsibility-based MVC if appropriate. Target root: fixture. Write the audit to outputs/audit.md. Preserve endpoint meaning and checkout behavior. Continue independently unless a truly mandatory decision blocks you.",
+  "assertions": [
+    "Identifies JavaScript, Express, the LMS domain, src/app.js as the entry point, SQLite persistence, and AppManager-centered responsibilities.",
+    "Records boot, endpoint, checkout/report/deletion flows, persistence, and discovery limitations before making architecture judgments.",
+    "Writes outputs/audit.md with fingerprint, scope, baseline, limitations, severity summary in CRITICAL-HIGH-MEDIUM-LOW order, findings, proposed scope, approval prompt, and snapshot digest.",
+    "Contains at least five root-cause-distinct findings, including at least one CRITICAL or HIGH finding.",
+    "Every finding uses an existing repository-relative file and valid one-based inclusive line range with non-empty evidence, impact, and recommendation.",
+    "Any deprecated-API claim is tied to the detected dependency version and authoritative current documentation; otherwise deprecation uncertainty is recorded as a limitation.",
+    "Does not mutate fixture source, configuration, dependencies, schemas, databases, or tests before explicit approval tied to the reviewed report.",
+    "Proposes contextual decomposition of AppManager plus boot, endpoint, checkout, persistence, rollback, and security validation without imposing Flask conventions."
+  ]
+}

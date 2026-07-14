@@ -1,0 +1,15 @@
+{
+  "eval_id": 1,
+  "eval_name": "flask-store-gate",
+  "prompt": "Audit this unfamiliar Flask backend and, if you find worthwhile issues, refactor it toward contextual MVC while preserving its HTTP behavior. Target root: fixture. Save the audit report to outputs/audit.md. I need exact file-and-line evidence. Use your judgment and complete as much as possible without waiting for further clarification.",
+  "assertions": [
+    "Identifies Python, Flask, the e-commerce domain, app.py as an entry point, SQLite persistence, and the current responsibility shape.",
+    "Records boot, endpoint, representative domain-flow, persistence, and discovery limitations before making architecture judgments.",
+    "Writes outputs/audit.md with fingerprint, scope, baseline, limitations, severity summary in CRITICAL-HIGH-MEDIUM-LOW order, findings, proposed scope, approval prompt, and snapshot digest.",
+    "Contains at least five root-cause-distinct findings, including at least one CRITICAL or HIGH finding.",
+    "Every finding uses an existing repository-relative file and valid one-based inclusive line range with non-empty evidence, impact, and recommendation.",
+    "Any deprecated-API claim is tied to the detected dependency version and authoritative current documentation; otherwise deprecation uncertainty is recorded as a limitation.",
+    "Does not mutate fixture source, configuration, dependencies, schemas, databases, or tests before explicit approval tied to the reviewed report.",
+    "Proposes responsibility-based MVC changes and names boot, endpoint, domain-flow, persistence, and security validation obligations without forcing one directory template."
+  ]
+}
