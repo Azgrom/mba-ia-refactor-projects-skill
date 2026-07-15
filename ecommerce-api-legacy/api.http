@@ -1,4 +1,7 @@
 @baseUrl = http://localhost:3000
+# Admin endpoints require the admin token. Set ADMIN_TOKEN when starting the app
+# (or read the generated token printed at boot) and use it below.
+@adminToken = testtoken
 
 ### Checkout - sucesso
 POST {{baseUrl}}/api/checkout
@@ -26,6 +29,8 @@ Content-Type: application/json
 
 ### Relatório financeiro administrativo
 GET {{baseUrl}}/api/admin/financial-report
+Authorization: Bearer {{adminToken}}
 
 ### Deletar usuário
 DELETE {{baseUrl}}/api/users/1
+Authorization: Bearer {{adminToken}}
