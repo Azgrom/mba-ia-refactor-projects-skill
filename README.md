@@ -2,27 +2,25 @@
 
 Repositório público no GitHub (fork do repositório base) contendo:
 
-- Skill completa em `.claude/skills/refactor-arch/` (dentro dos 3 projetos)
+- Skill completa em `refactor-arch/` (dentro dos 3 projetos)
+  - Link sombólico dentro de cada project, apontando para a skill
 - Código refatorado dos 3 projetos (resultado da execução da Fase 3, commitado no repositório)
 - Relatórios de auditoria em `reports/` (3 arquivos)
+  - Os relatórios de autoria dos resultados seguem o prefixo `audit-project`
+  - Os relatórios de validação dos débitos encontrados seguem o prefixo `validation`
 - `README.md` atualizado
 
 ## Estrutura do repositório
 
-**O que você vai criar:**
-
-- `.claude/skills/refactor-arch/` — A skill completa (SKILL.md + arquivos de referência)
+- `refactor-arch/` — A skill completa (SKILL.md + arquivos de referência)
 - Código refatorado dos 3 projetos — resultado da execução da Fase 3, commitado no repositório
 - `reports/audit-project-{1,2,3}.md` — Relatório de auditoria de cada projeto
 - `README.md` — Documentação do seu processo
-
-**O que já vem pronto:**
-
+- `docs/refactor-arch-effectiveness-benchmark/` com a validação da eficácia da skill, utilizada como critério de 'feito'
+- `docs/spdd` e `docs/superpowers` com documentação gerada por análises das skills superpowers e workdlow structured prompt driven development, utilizando as instruções da `skill-creator` como checklist de levantamento
 - `code-smells-project/` — API de E-commerce Python/Flask com code smells intencionais
 - `ecommerce-api-legacy/` — LMS API Node.js/Express (com fluxo de checkout) e problemas de implementação
 - `task-manager-api/` — API de Task Manager Python/Flask com organização parcial e problemas de segurança/qualidade
-
-> **Dica:** Cada projeto contém problemas intencionais de diferentes severidades (CRITICAL, HIGH, MEDIUM, LOW), incluindo falhas de segurança, violações arquiteturais e problemas de qualidade de código. Parte do desafio é identificá-los por conta própria através da análise manual do código.
 
 ## README.md deve conter
 
@@ -53,33 +51,42 @@ Repositório público no GitHub (fork do repositório base) contendo:
 - Comandos para executar a skill em cada projeto
 - Como validar que a refatoração funcionou
 
-Salve a saída da Fase 2 de cada projeto em `reports/audit-project-{1,2,3}.md`.
-
-# Critérios de Aceite
-
-A skill deve atingir os seguintes mínimos em **todos os 3 projetos**:
-
-| Critério | Requisito |
-|---|---|
-| Fase 1 detecta stack corretamente | OBRIGATÓRIO (3/3 projetos) |
-| Fase 2 encontra >= 5 findings | OBRIGATÓRIO (3/3 projetos) |
-| Fase 2 inclui pelo menos 1 CRITICAL ou HIGH | OBRIGATÓRIO (3/3 projetos) |
-| Fase 3 aplicação funciona após refatoração | OBRIGATÓRIO (3/3 projetos) |
-
-**IMPORTANTE:** Todos os critérios devem ser atingidos nos 3 projetos, não apenas em um!
-
-> **Sobre o projeto 3 (task-manager-api):** Este projeto já possui alguma organização. "aplicação funciona" significa que a API inicia sem erros e todos os endpoints continuam respondendo corretamente.
-
 # Análise Manual
 
 ## `code-smell-project`
+- Código plano na raiz
+- Acúmulo de responsabilidades no entrypoint
+- Sem testes
 
 ## `ecommerce-api-lagacy`
+- Recursos não implementados
+- Acúmulo de responsabilidades no entrypoint
 
 ## `task-manager-api`
+- segregação fraca de responsabilidades
+- Sem testes
+- Falta de organização
 
 # Construção da Skill
 
+Solicitei que `/superpowers` carregasse as instruções de `/skill-creator` e passasse o plano resultante para `/spdd-analysis`
+
+Em um novo contexto, solicitei para `/spdd-generate` criar o prompt de criação da skill
+
+Em um novo contexto, solicitei `/skill-creator` para executar a criação da skill com o prompt gerado
+
+Workdlow SPDD pode ser encontrado [aqui](https://martinfowler.com/articles/structured-prompt-driven/)
+
 # Resultados
 
+Só se mexe com performance, medindo. O critério de aceite é definido pelo quão bom pode-se considerar feito. O quão bom deve ser medido pela eficácia da skill, através de benchmark. O resultado do benchmark pode ser encontrado em `docs/refactor-arch-effectiveness-benchmark`
+
+A skill utilizada para rodar o benchmark pode ser encontrada em `refactor-arch/`
+
+Todos projetos contém um link simbólico dentro de `.claude/skills/` que aponta para `refactor-arch/`
+
 # Como Executar
+
+Abre Claude Code. Solicita que as instruções de `refactor-arch/` analisem o codebase.
+
+O Claude Code pode ser executado a partir da raiz deste repositório, ou a partir de dentro de cada um dos projetos
