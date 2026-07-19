@@ -165,3 +165,23 @@ Reply with explicit approval of this report path and snapshot digest before any 
 
 ## Audit Snapshot Digest
 `sha256:63f187e87c55938227c7f90434d718948eda16f7ecbc6c0d2f1367352c93fdeb`
+
+## Post-Approval Resolution Addendum
+
+Approved mutation:
+`Approve reports/audit-project-ecommerce-api-legacy.md sha256:63f187e87c55938227c7f90434d718948eda16f7ecbc6c0d2f1367352c93fdeb F-006,F-010`.
+
+Resolved subset:
+
+- `F-006`: checkout now decides payment before any new-user write and creates a
+  new user inside the same transaction as enrollment, payment, and audit writes.
+  Evidence: `ecommerce-api-legacy/src/services/checkoutService.js:25-37`;
+  regression: `ecommerce-api-legacy/tests/regression.test.js:51-90`.
+- `F-010`: financial report access remains authorized and projected, and is now
+  bounded through validated `limit`/`offset` query parameters while preserving the
+  existing array response shape. Evidence:
+  `ecommerce-api-legacy/src/http/reportController.js:6-30` and
+  `ecommerce-api-legacy/src/repositories/reportRepository.js:10-30`;
+  regression: `ecommerce-api-legacy/tests/regression.test.js:93-114`.
+
+Validation evidence: `reports/validation-ecommerce-api-legacy.md`.

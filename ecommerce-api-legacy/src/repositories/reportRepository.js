@@ -7,8 +7,14 @@ class ReportRepository {
         this.db = db;
     }
 
-    fetchReportRows() {
+    fetchReportRows({ limit = 100, offset = 0 } = {}) {
         return this.db.all(`
+            WITH bounded_courses AS (
+                SELECT id, title
+                FROM courses
+                ORDER BY id ASC
+                LIMIT ? OFFSET ?
+            )
             SELECT
                 c.id      AS course_id,
                 c.title   AS course_title,
@@ -16,12 +22,12 @@ class ReportRepository {
                 u.name    AS student_name,
                 p.amount  AS payment_amount,
                 p.status  AS payment_status
-            FROM courses c
+            FROM bounded_courses c
             LEFT JOIN enrollments e ON e.course_id = c.id
             LEFT JOIN users u ON u.id = e.user_id
             LEFT JOIN payments p ON p.enrollment_id = e.id
             ORDER BY c.id ASC, e.id ASC
-        `);
+        `, [limit, offset]);
     }
 }
 

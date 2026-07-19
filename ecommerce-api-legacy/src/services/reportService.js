@@ -7,8 +7,8 @@ class ReportService {
         this.report = report;
     }
 
-    async buildFinancialReport() {
-        const rows = await this.report.fetchReportRows();
+    async buildFinancialReport({ limit, offset } = {}) {
+        const rows = await this.report.fetchReportRows({ limit, offset });
         const byCourse = new Map();
 
         for (const row of rows) {
